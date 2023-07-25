@@ -5,7 +5,7 @@ public class HarmonicSeriesSum {
     public static void main(String[] args) {
         double sum = 0.0;
         int n = 2;  // начальное значение (1 уже не учитываем)
-        int limit = 2_140_000_000;  // предел для количества членов ряда
+        int limit = 2_140_000;  // предел для количества членов ряда
 
         System.out.println("  Член ряда            Сумма");
         System.out.println("---------            -----");
@@ -19,6 +19,7 @@ public class HarmonicSeriesSum {
         }
 
         System.out.printf("\nИтоговая сумма ряда после %d членов: %.15f%n", limit, sum);
+        System.out.print(Integer.MAX_VALUE);
     }
 
 }
