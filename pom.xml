@@ -12,6 +12,7 @@
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <junit-jupiter.version>5.9.2</junit-jupiter.version>
         <jetbrains.version>24.0.1</jetbrains.version>
@@ -97,7 +98,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.example.Main</mainClass>
+                            <mainClass>org.example.HarmonicSeriesSum</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -123,7 +124,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>org.example.Main</mainClass>
+                            <mainClass>org.example.HarmonicSeriesSum</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

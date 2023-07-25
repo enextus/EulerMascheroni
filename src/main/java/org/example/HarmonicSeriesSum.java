@@ -1,8 +1,11 @@
 package org.example;
 
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+
 public class HarmonicSeriesSum {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
         double sum = 0.0;
         int n = 2;  // начальное значение (1 уже не учитываем)
         int limit = 2_140_000;  // предел для количества членов ряда
@@ -18,8 +21,12 @@ public class HarmonicSeriesSum {
             }
         }
 
-        System.out.printf("\nИтоговая сумма ряда после %d членов: %.15f%n", limit, sum);
-        System.out.print(Integer.MAX_VALUE);
+        System.setOut(new PrintStream(System.out, true, "UTF-8"));
+
+        System.out.printf("\nFinal series sum after  %d terms: %.15f%n", limit, sum);
+
+
+        System.out.print("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
     }
 
 }
