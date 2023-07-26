@@ -13,12 +13,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GraphView {
-    private JFrame frame;
-    private XYSeries series;
-
-    private JFreeChart chart;
-
-
+    public static final String DELTA = "Delta";
+    private final JFrame frame;
+    private final XYSeries series;
+    private final JFreeChart chart;
     public GraphView() {
         frame = new JFrame("Harmonic Series Graph");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,7 +41,6 @@ public class GraphView {
         frame.pack();
     }
 
-
     public void display() {
         frame.setVisible(true);
     }
@@ -54,10 +51,10 @@ public class GraphView {
 
     public void setLogarithmicAxis(boolean useLogAxis) {
         if (useLogAxis) {
-            LogarithmicAxis logAxis = new LogarithmicAxis("Delta");
+            LogarithmicAxis logAxis = new LogarithmicAxis(DELTA);
             chart.getXYPlot().setRangeAxis(logAxis);
         } else {
-            NumberAxis linearAxis = new NumberAxis("Delta");
+            NumberAxis linearAxis = new NumberAxis(DELTA);
             chart.getXYPlot().setRangeAxis(linearAxis);
         }
     }
