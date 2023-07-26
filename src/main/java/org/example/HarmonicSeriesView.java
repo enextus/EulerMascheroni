@@ -1,6 +1,7 @@
 package org.example;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class HarmonicSeriesView {
     private JTextArea textArea;
@@ -12,6 +13,7 @@ public class HarmonicSeriesView {
 
         textArea = new JTextArea();
         textArea.setEditable(false);
+        textArea.setFont(new Font("Monospaced", Font.PLAIN, 18));  // Установка моноширинного шрифта
         JScrollPane scrollPane = new JScrollPane(textArea);
 
         frame.add(scrollPane);
@@ -21,5 +23,4 @@ public class HarmonicSeriesView {
     public void appendText(String text) {
         textArea.append(text + "\n");
     }
-
 }

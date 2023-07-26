@@ -13,11 +13,18 @@ public class HarmonicSeriesController {
         view.appendText("  Term                Sum");
         view.appendText("---------            -----");
 
-        double sum = calculator.calculateSum(limit);
+        double sum = 0.0;
 
-        for (int n = 2; n <= limit + 1; n++) if (n % 1000 == 0) view.appendText(String.format("%10d    %.15f", n, sum));
+        for (int n = 2; n <= limit + 1; n++) {
+            sum += 1.0 / n; // Накапливаем сумму в цикле
+
+            if ((n == 2) || (n % 1000 == 0)) {
+                view.appendText(String.format("%10d    %.15f", n, sum));
+            }
+        }
 
         view.appendText(String.format("\nFinal series sum after  %d terms: %.15f", limit, sum));
         view.appendText("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
     }
+
 }
