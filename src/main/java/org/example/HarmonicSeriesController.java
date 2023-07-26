@@ -11,6 +11,10 @@ public class HarmonicSeriesController {
         this.graphView = new GraphView();  // инициализация нового графического представителя
     }
 
+    public void setLogarithmicAxis(boolean useLogAxis) {
+        graphView.setLogarithmicAxis(useLogAxis);
+    }
+
     public void displaySeries(int limit) {
         view.appendText("  Term                Sum");
         view.appendText("---------            -----");
@@ -29,6 +33,8 @@ public class HarmonicSeriesController {
         view.appendText(String.format("\nFinal series sum after  %d terms: %.15f", limit, previousSum));
         view.appendText("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
 
+
         graphView.display();  // отображаем график
     }
+
 }
