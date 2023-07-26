@@ -7,11 +7,12 @@ public class App {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             // Создаем радио-кнопки для выбора масштаба
-            JRadioButton normalScaleButton = new JRadioButton("Normal Scale", true);
-            JRadioButton logScaleButton = new JRadioButton("Logarithmic Scale");
+            JRadioButton logScaleButton = new JRadioButton("Logarithmic Scale", true);
+            JRadioButton normalScaleButton = new JRadioButton("Normal Scale");
+
             ButtonGroup scaleGroup = new ButtonGroup();
-            scaleGroup.add(normalScaleButton);
             scaleGroup.add(logScaleButton);
+            scaleGroup.add(normalScaleButton);
 
             JPanel inputPanel = new JPanel();
             inputPanel.setLayout(new BorderLayout());
@@ -22,14 +23,15 @@ public class App {
 
             // Панель с радио-кнопками
             JPanel radioPanel = new JPanel();
-            radioPanel.add(normalScaleButton);
             radioPanel.add(logScaleButton);
+            radioPanel.add(normalScaleButton);
             inputPanel.add(radioPanel, BorderLayout.SOUTH);
 
             int result = JOptionPane.showConfirmDialog(null, inputPanel,
                     "Введите количество элементов ряда и выберите шкалу:", JOptionPane.OK_CANCEL_OPTION);
 
             int limit = 10000; // значение по умолчанию
+
             if (result == JOptionPane.OK_OPTION) {
                 try {
                     limit = Integer.parseInt(inputField.getText());
@@ -46,5 +48,5 @@ public class App {
             controller.displaySeries(limit);
         });
     }
-    
+
 }
