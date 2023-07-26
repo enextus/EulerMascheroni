@@ -8,15 +8,16 @@ public class HarmonicSeriesView {
 
     public HarmonicSeriesView() {
         JFrame frame = new JFrame("Harmonic Series Sum");
+        frame.setLayout(new BorderLayout());
         frame.setSize(600, 1000);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // Text Area setup
         textArea = new JTextArea();
         textArea.setEditable(false);
-        textArea.setFont(new Font("Monospaced", Font.PLAIN, 18));  // Установка моноширинного шрифта
         JScrollPane scrollPane = new JScrollPane(textArea);
+        frame.add(scrollPane, BorderLayout.CENTER);
 
-        frame.add(scrollPane);
         frame.setVisible(true);
     }
 

@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class App {
 
-    public static final int LIMIT = 2_140_000;
+    public static final int LIMIT = 10000;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
