@@ -1,7 +1,6 @@
-package org.example.model;
+package org.example;
 
 public class HarmonicSeriesCalculator {
-
     public double calculateSum(int limit) {
         double sum = 0.0;
         for (int n = 2; n <= limit + 1; n++) {
@@ -9,4 +8,5 @@ public class HarmonicSeriesCalculator {
         }
         return sum;
     }
+
 }

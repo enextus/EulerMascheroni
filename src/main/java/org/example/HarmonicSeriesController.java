@@ -1,10 +1,6 @@
-package org.example.controller;
-
-import org.example.model.HarmonicSeriesCalculator;
-import org.example.view.HarmonicSeriesView;
+package org.example;
 
 public class HarmonicSeriesController {
-
     private final HarmonicSeriesCalculator calculator;
     private final HarmonicSeriesView view;
 
@@ -19,9 +15,7 @@ public class HarmonicSeriesController {
 
         double sum = calculator.calculateSum(limit);
 
-        for (int n = 2; n <= limit + 1; n++) {
-            if (n % 1000 == 0) view.appendText(String.format("%10d    %.15f", n, sum));
-        }
+        for (int n = 2; n <= limit + 1; n++) if (n % 1000 == 0) view.appendText(String.format("%10d    %.15f", n, sum));
 
         view.appendText(String.format("\nFinal series sum after  %d terms: %.15f", limit, sum));
         view.appendText("Integer.MAX_VALUE = " + Integer.MAX_VALUE);

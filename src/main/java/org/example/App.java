@@ -1,9 +1,6 @@
 package org.example;
 
 import javax.swing.*;
-import org.example.model.HarmonicSeriesCalculator;
-import org.example.view.HarmonicSeriesView;
-import org.example.controller.HarmonicSeriesController;
 
 public class App {
 
@@ -16,4 +13,5 @@ public class App {
             controller.displaySeries(2_140_000);
         });
     }
+
 }

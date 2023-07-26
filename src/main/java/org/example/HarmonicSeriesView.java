@@ -1,10 +1,8 @@
-package org.example.view;
+package org.example;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class HarmonicSeriesView {
-
     private JTextArea textArea;
 
     public HarmonicSeriesView() {
@@ -23,4 +21,5 @@ public class HarmonicSeriesView {
     public void appendText(String text) {
         textArea.append(text + "\n");
     }
+
 }
