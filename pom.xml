@@ -98,7 +98,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.example.HarmonicSeriesSum</mainClass>
+                            <mainClass>org.example.App</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -124,7 +124,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>org.example.HarmonicSeriesSum</mainClass>
+                            <mainClass>org.example.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

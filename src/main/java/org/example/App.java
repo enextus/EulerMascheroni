@@ -5,7 +5,7 @@ import org.example.model.HarmonicSeriesCalculator;
 import org.example.view.HarmonicSeriesView;
 import org.example.controller.HarmonicSeriesController;
 
-public class HarmonicSeriesSum {
+public class App {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
