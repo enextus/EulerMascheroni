@@ -6,7 +6,7 @@ import java.awt.*;
 public class App {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            // Создаем радио-кнопки для выбора масштаба
+            // Create radio buttons for selecting the scale
             JRadioButton logScaleButton = new JRadioButton("Logarithmic Scale", true);
             JRadioButton normalScaleButton = new JRadioButton("Normal Scale");
 
@@ -17,26 +17,26 @@ public class App {
             JPanel inputPanel = new JPanel();
             inputPanel.setLayout(new BorderLayout());
 
-            // Текстовое поле
+            // Text field
             JTextField inputField = new JTextField("10000");
             inputPanel.add(inputField, BorderLayout.CENTER);
 
-            // Панель с радио-кнопками
+            // Panel with radio buttons
             JPanel radioPanel = new JPanel();
             radioPanel.add(logScaleButton);
             radioPanel.add(normalScaleButton);
             inputPanel.add(radioPanel, BorderLayout.SOUTH);
 
             int result = JOptionPane.showConfirmDialog(null, inputPanel,
-                    "Введите количество элементов ряда и выберите шкалу:", JOptionPane.OK_CANCEL_OPTION);
+                    "Enter the number of series elements and select the scale:", JOptionPane.OK_CANCEL_OPTION);
 
-            int limit = 10000; // значение по умолчанию
+            int limit = 10000; // default value
 
             if (result == JOptionPane.OK_OPTION) {
                 try {
                     limit = Integer.parseInt(inputField.getText());
                 } catch (NumberFormatException e) {
-                    // если пользователь введет некорректное значение или ничего не введет, значение по умолчанию будет 10000
+                    // If the user enters an incorrect value or nothing, the default value will be 10000
                 }
             }
 
@@ -48,5 +48,4 @@ public class App {
             controller.displaySeries(limit);
         });
     }
-
 }
